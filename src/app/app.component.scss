@@ -1,0 +1,15 @@
+@import "~variables.scss";
+@import "~mixins.scss";
+
+.poop{
+  .butt {
+    font-size: 30pt;
+    color: $someGreen;
+    @include tablet {
+      font-size: 100pt;
+    }
+    @include desktop {
+      font-size: 500pt;
+    }
+  }
+}

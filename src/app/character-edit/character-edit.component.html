@@ -1,0 +1,32 @@
+<h4>Edit Character</h4>
+<label>New Character Name:</label>
+<input [(ngModel)]="selectedCharacter.name">
+<br>
+<label>New Character Gender:</label>
+<select [(ngModel)]="selectedCharacter.gender">
+  <option>Female</option>
+  <option>Male</option>
+  <option>Other</option>
+</select>
+<br>
+<label>New Character Charisma:</label>
+<input [(ngModel)]="selectedCharacter.charisma">
+<br>
+<label>New Character Dexterity:</label>
+<input [(ngModel)]="selectedCharacter.dexterity">
+<br>
+<label>New Character Intelligence:</label>
+<input [(ngModel)]="selectedCharacter.intelligence">
+<br>
+<label>New Character Strength:</label>
+<input [(ngModel)]="selectedCharacter.strength">
+<br>
+<label>New Character Inventory:</label>
+<input [(ngModel)]="selectedCharacter.inventory">
+<br>
+<label>New Character Gold:</label>
+<input [(ngModel)]="selectedCharacter.gold">
+<br>
+<button (click)="beginUpdatingCharacter(selectedCharacter)">Update</button>
+<hr>
+<button (click)="beginDeletingCharacter(selectedCharacter)">Delete</button>
