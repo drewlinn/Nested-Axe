@@ -1,3 +1,157 @@
-<p>
-  player works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Create A New Character!</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Character Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+     <div>
+       <label>Character Gender:</label>
+       <br>
+       <select #newGender>
+         <option>Female</option>
+         <option>Male</option>
+         <option>Other</option>
+       </select>
+     </div>
+     {{charisma}} {{dexterity}} {{intelligence}} {{strength}}
+     <div>
+       <label>Your father was a humble lumberjack. He worked hard every single day chopping down mighty trees and hauling the wood to sell in the village.
+
+       Your mother was a ... </label>
+       <br>
+       <div class="radio">
+         <label>
+           <input type="radio" name="mother" (click)="addChar()">
+           Barmaid
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="mother" (click)="addDex()">
+           Seamstress
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="mother" (click)="addInt()">
+           Cook
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="mother" (click)="addStr()">
+           Farmgirl
+         </label>
+       </div>
+     </div>
+
+     <div>
+       <label>As a child you spent most of your time...</label>
+       <br>
+       <div class="radio">
+         <label>
+           <input type="radio" name="childhood" (click)="addChar()">
+           Helping your mother around the house.
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="childhood" (click)="addDex()">
+           Running and playing in the nearby woods.
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="childhood" (click)="addInt()">
+           Listening to the stories of the Village Elders.
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="childhood" (click)="addStr()">
+           Helping your father cut and haul lumber.
+         </label>
+       </div>
+     </div>
+
+     <div>
+       <label>As a young adult you apprenticed with...</label>
+       <br>
+
+       <div class="radio">
+         <label>
+           <input type="radio" name="apprentice" (click)="addChar()">
+           Your father
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="apprentice" (click)="addDex()">
+           The Innkeeper
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="apprentice" (click)="addInt()">
+           The Clergyman
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="apprentice" (click)="addStr()">
+           The Stablemaster
+         </label>
+       </div>
+     </div>
+
+     <div>
+       <label>One particularly harsh Winter, food and money were scarce. In an act of desperation to feed his family, your father stole some food so your family could make it through til spring. Unfortunately, the people that the food belonged to were well connected with the local lord, who then had your father executed for theft. This left your mother bereft of a means of living, so you decided to...</label>
+       <br>
+
+       <div class="radio">
+         <label>
+           <input type="radio" name="living" (click)="addChar()">
+           Take over the family business, chopping wood.
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="living" (click)="addDex()">
+           Roam the woods as a hunter.
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="living" (click)="addInt()">
+           Become a scholar.
+         </label>
+       </div>
+       <div class="radio">
+         <label>
+           <input type="radio" name="living" (click)="addStr()">
+           Join the Village Militia.
+         </label>
+       </div>
+     </div>
+
+     <button (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Or select and/or edit one from our list:</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <app-character-list></app-character-list>
+    </div>
+  </div>
+</div>

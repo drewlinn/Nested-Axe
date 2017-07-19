@@ -19,6 +19,7 @@ import { Scene03Component } from './scene03/scene03.component';
 import { Scene04Component } from './scene04/scene04.component';
 import { Scene05Component } from './scene05/scene05.component';
 import { Scene06Component } from './scene06/scene06.component';
+import { AboutComponent } from './about/about.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -40,7 +41,8 @@ export const firebaseConfig = {
     Scene03Component,
     Scene04Component,
     Scene05Component,
-    Scene06Component
+    Scene06Component,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
