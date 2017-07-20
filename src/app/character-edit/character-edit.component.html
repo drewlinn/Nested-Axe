@@ -2,12 +2,14 @@
 <label>New Character Name:</label>
 <input [(ngModel)]="selectedCharacter.name">
 <br>
+
 <label>New Character Gender:</label>
 <select [(ngModel)]="selectedCharacter.gender">
   <option>Female</option>
   <option>Male</option>
   <option>Other</option>
 </select>
+
 <br>
 <label>New Character Inventory:</label>
 <input [(ngModel)]="selectedCharacter.inventory">
@@ -16,5 +18,5 @@
 <input [(ngModel)]="selectedCharacter.gold">
 <br>
 <button (click)="beginUpdatingCharacter(selectedCharacter)">Update</button>
-<hr>
+
 <button (click)="beginDeletingCharacter(selectedCharacter)">Delete</button>

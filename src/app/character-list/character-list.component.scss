@@ -25,7 +25,7 @@
     text-align: center;
   }
 
-  .characters {
+  .characters {//everything inside parchment
     //flex
     display: flex;
     flex-wrap: wrap;
@@ -33,16 +33,21 @@
 
     .character {
       //color
-      // border: 8px solid $someGreen;
       background: url('../../assets/images/parchment.png') center center no-repeat;
       background-size: cover;
 
-      //flex
-      flex-basis: 300px;
+      //size
+      height: 475px;
+      width: 300px;
+
+
+
+      // //flex
+      // flex-basis: 300px;
 
       //margin/padding
       margin: 20px;
-      padding: 10px;
+      padding: 20px;
     }
   }
 }
