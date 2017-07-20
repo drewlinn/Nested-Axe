@@ -24,4 +24,10 @@ export class CharacterListComponent implements OnInit {
   goToDetailPage(clickedCharacter) {
     this.router.navigate(['characters', clickedCharacter.$key]);
   };
+
+  toggleEdit(){
+    var characterEdit = document.getElementById('characterEdit');
+    characterEdit.classList.toggle('show');
+  }
+
 }

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  height: 100vh;
+  width: 100vw;
+
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  margin: auto;
+  h3 {
+    margin: 0;
+    padding: 10px;
+  }
+}

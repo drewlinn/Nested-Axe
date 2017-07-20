@@ -2,6 +2,10 @@
 
   <h2>Choose an Adventurer</h2>
 
+  <div class="button">
+    <h3 routerLink="/player">or create your own</h3>
+  </div>
+
   <div class="characters">
 
     <div *ngFor="let character of characters | async" class="character">
@@ -9,8 +13,10 @@
         <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}}</h4>
         <p>Inventory: {{character.inventory}} Gold: {{character.gold}}</p>
 
-        <div *ngIf="currentRoute === '/character-list'">
-          <hr>
+        <button id="characterEditButton" (click)="toggleEdit(character)">Edit</button>
+
+        <!-- <div *ngIf="currentRoute === '/character-list'"> -->
+        <div class="character-edit" id="characterEdit">
           <app-character-edit [selectedCharacter]="character"></app-character-edit>
         </div>
     </div>
