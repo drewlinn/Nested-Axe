@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { PlayerComponent } from './player/player.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { AboutComponent } from './about/about.component';
+import { CharacterDetailComponent } from './character-detail/character-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
   {
     path: 'character-list',
     component: CharacterListComponent
+  },
+  {
+    path: 'characters/:id',
+    component: CharacterDetailComponent
   },
   {
     path: 'about',

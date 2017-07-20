@@ -1,3 +1,6 @@
+@import "~assets/scss/variables.scss";
+@import "~assets/scss/mixins.scss";
+
 .page-flexbox-parent {
 
   background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
@@ -30,8 +33,9 @@
 
     .character {
       //color
-      border: 8px solid pink;
-      background: white;
+      // border: 8px solid $someGreen;
+      background: url('../../assets/images/parchment.png') center center no-repeat;
+      background-size: cover;
 
       //flex
       flex-basis: 300px;
@@ -41,4 +45,14 @@
       padding: 10px;
     }
   }
+}
+
+
+.character-edit {//div where the character edit component template will be passed thru
+
+}
+
+.show {
+  display: block;
+
 }
