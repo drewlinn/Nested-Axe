@@ -18,8 +18,8 @@ export class PlayerComponent implements OnInit {
   checkSecond: boolean = true;
   checkThird: boolean = true;
   checkFourth: boolean = true;
-
-
+  //Leena Thing
+  // radioButtonGroups=[living, apprentice];
   constructor(private characterService: CharacterService) { }
 
   addChar() {
@@ -41,11 +41,18 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Leena Stuff
+  // submitForm(name: string, gender: string, charisma: number, dexterity: number, intelligence: number, strength: number) {
+  //   for(group in radioButtonGroup){
+  //     if(group === "charisma"){
+  //       charisma++;
+  //     }
+  //   }
 
-  submitForm(name: string, gender: string, charisma: number, dexterity: number, intelligence: number, strength: number) {
 
-    var newCharacter: Character = new Character(name, gender, charisma, dexterity, intelligence, strength);
-    this.characterService.addCharacter(newCharacter);
-    console.log(newCharacter);
-  }
+  //old stuff
+  //   var newCharacter: Character = new Character(name, gender, charisma, dexterity, intelligence, strength);
+  //   this.characterService.addCharacter(newCharacter);
+  //   console.log(newCharacter);
+  // }
 }

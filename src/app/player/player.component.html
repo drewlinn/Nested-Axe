@@ -114,31 +114,31 @@
        <label>One particularly harsh Winter, food and money were scarce. In an act of desperation to feed his family, your father stole some food so your family could make it through til spring. Unfortunately, the people that the food belonged to were well connected with the local lord, who then had your father executed for theft. This left your mother bereft of a means of living, so you decided to...</label>
        <br>
 
-       <div class="radio">
+       <!-- <div class="radio">
          <label>
            <input type="radio" name="living" (click)="addChar()">
            Take over the family business, chopping wood.
          </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="living" (click)="addDex()">
+       </div> -->
+
+
+           <!-- <input type="radio" name="living" [(ngModel)]="living" value="charisma">
+           Take over the family business, chopping wood.
+
+
+           <input type="radio" name="living" [(ngModel)]="living" value="test2">
            Roam the woods as a hunter.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="living" (click)="addInt()">
+
+
+           <input type="radio" name="living" [(ngModel)]="living" value="test3">
            Become a scholar.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="living" (click)="addStr()">
-           Join the Village Militia.
-         </label>
-       </div>
-     </div>
+
+
+           <input type="radio" name="living" [(ngModel)]="living" value="test4">
+           Join the Village Militia. -->
+
+
+<p>{{living}}</p>
 
      <button routerLink="/scene01" (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
     </div>
@@ -155,3 +155,25 @@
     </div>
   </div>
 </div> -->
+
+
+
+<div class="radio">
+  <label>
+    <input type="radio" name="living" (click)="addDex()">
+    Roam the woods as a hunter.
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="living" (click)="addInt()">
+    Become a scholar.
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="living" (click)="addStr()">
+    Join the Village Militia.
+  </label>
+</div>
+</div>
