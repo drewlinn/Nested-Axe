@@ -13,10 +13,13 @@
         <h3 (click)="goToDetailPage(character)"><em>{{character.name}}</em>  {{character.gender}}</h3>
         <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}} Inventory: {{character.inventory}} Gold: {{character.gold}}</h4>
 
+
         <!-- <div *ngIf="currentRoute === '/character-list'"> -->
         <div class="character-edit" id="characterEdit">
           <app-character-edit [selectedCharacter]="character"></app-character-edit>
         </div>
+        <br>
+        <button routerLink="/scene01">Start</button>
     </div>
 
   </div>
