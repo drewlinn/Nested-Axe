@@ -4,6 +4,7 @@
   </div>
   <div class="panel-body">
     <div>
+      <form id="addPerson">
       <div>
         <label>Character Name:</label>
         <br>
@@ -19,33 +20,34 @@
          <option>Other</option>
        </select>
      </div>
-     {{charisma}} {{dexterity}} {{intelligence}} {{strength}}
+     <!-- {{charisma}} {{dexterity}} {{intelligence}} {{strength}} -->
      <div>
        <label>Your father was a humble lumberjack. He worked hard every single day chopping down mighty trees and hauling the wood to sell in the village.
 
        Your mother was a ... </label>
        <br>
        <div class="radio">
+
          <label>
-           <input type="radio" name="mother" (click)="addChar()">
+           <input type="radio" class="mother" name="mother" value="char">
            Barmaid
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="mother" (click)="addDex()">
+           <input type="radio" class="mother" name="mother" value="dex" >
            Seamstress
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="mother" (click)="addInt()">
+           <input type="radio" class="mother" name="mother" value="intel">
            Cook
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="mother" (click)="addStr()">
+           <input type="radio" class="mother" name="mother" value="strength">
            Farmgirl
          </label>
        </div>
@@ -56,25 +58,25 @@
        <br>
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" (click)="addChar()">
+           <input type="radio" name="childhood" value="char">
            Helping your mother around the house.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" (click)="addDex()">
+           <input type="radio" name="childhood" value="dex">
            Running and playing in the nearby woods.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" (click)="addInt()">
+           <input type="radio" name="childhood" value="intel">
            Listening to the stories of the Village Elders.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="childhood" (click)="addStr()">
+           <input type="radio" name="childhood" value="strength">
            Helping your father cut and haul lumber.
          </label>
        </div>
@@ -86,25 +88,25 @@
 
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" (click)="addChar()">
+           <input type="radio" name="apprentice" value="char"  #firstQ>
            Your father
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" (click)="addDex()">
+           <input type="radio" name="apprentice" value="dex"  #firstQ>
            The Innkeeper
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" (click)="addInt()">
+           <input type="radio" name="apprentice" value="intel">
            The Clergyman
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="apprentice" (click)="addStr()">
+           <input type="radio" name="apprentice" value="strength">
            The Stablemaster
          </label>
        </div>
@@ -116,31 +118,32 @@
 
        <div class="radio">
          <label>
-           <input type="radio" name="living" (click)="addChar()">
+           <input type="radio" name="living" value="char">
            Take over the family business, chopping wood.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="living" (click)="addDex()">
+           <input type="radio" name="living" value="dex">
            Roam the woods as a hunter.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="living" (click)="addInt()">
+           <input type="radio" name="living" value="intel">
            Become a scholar.
          </label>
        </div>
        <div class="radio">
          <label>
-           <input type="radio" name="living" (click)="addStr()">
+           <input type="radio" name="living" value="strength">
            Join the Village Militia.
          </label>
        </div>
      </div>
 
      <button (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
+   </form>
     </div>
   </div>
 </div>
