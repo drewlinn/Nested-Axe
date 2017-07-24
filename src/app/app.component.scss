@@ -1,15 +1,47 @@
 @import "~assets/scss/variables.scss";
 @import "~assets/scss/mixins.scss";
 
-.poop{
-  .butt {
-    font-size: 30pt;
-    // color: $someGreen;
-    @include tablet {
-      font-size: 100pt;
+// .poop{
+//   .butt {
+//     font-size: 30pt;
+//     // color: $someGreen;
+//     @include tablet {
+//       font-size: 100pt;
+//     }
+//     @include desktop {
+//       font-size: 500pt;
+//     }
+//   }
+// }
+
+.background {
+  height: 100%;
+  width: 100%;
+  // min-width: 550px;
+  background: url('../assets/images/woody.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  // overflow: none;
+  .content {
+    // border: 2px solid pink;
+    // overflow: auto;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    img {//parchment
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
     }
-    @include desktop {
-      font-size: 500pt;
-    }
+    // margin-top: 100px;
+    // margin-left: 35px;
   }
 }

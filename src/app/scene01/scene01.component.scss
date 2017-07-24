@@ -1,0 +1,18 @@
+.scene01 {
+  // background: url('../../assets/images/jail-cell-2-pixelated.png') center center no-repeat;
+  // background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  border: 2px solid teal;
+  width: 60%;
+  display: block;
+  margin: auto;
+
+
+  img {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
