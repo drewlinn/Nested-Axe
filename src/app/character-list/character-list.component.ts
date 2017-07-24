@@ -24,4 +24,5 @@ export class CharacterListComponent implements OnInit {
   goToDetailPage(clickedCharacter) {
     this.router.navigate(['characters', clickedCharacter.$key]);
   };
+
 }

@@ -20,9 +20,10 @@
       "prefix": "app",
       "styles": [
         "../bower_components/bootstrap/dist/css/bootstrap.css",
-        "styles.scss"
+        "../src/assets/scss/styles.scss"
       ],
       "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

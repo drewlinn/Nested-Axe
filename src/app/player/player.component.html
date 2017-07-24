@@ -142,13 +142,16 @@
        </div>
      </div>
 
-     <button (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
+
+     <button routerLink="/scene01" (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
    </form>
+
+
     </div>
   </div>
 </div>
 
-<div class="panel panel-default">
+<!-- <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Or select and/or edit one from our list:</h3>
   </div>
@@ -157,4 +160,4 @@
       <app-character-list></app-character-list>
     </div>
   </div>
-</div>
+</div> -->

@@ -24,4 +24,5 @@ export class CharacterEditComponent implements OnInit {
       this.characterService.deleteCharacter(characterToDelete);
     }
   }
+
 }

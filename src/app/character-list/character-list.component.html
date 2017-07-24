@@ -1,13 +1,26 @@
-<h2>Characters List</h2>
+<div class="page-flexbox-parent">
 
-<div *ngFor="let character of characters | async" class="panel panel-default">
-  <div class="panel-body">
-    <h3 (click)="goToDetailPage(character)"><em>{{character.name}}</em>  {{character.gender}}</h3>
-    <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}}</h4>
-    <p>Inventory: {{character.inventory}} Gold: {{character.gold}}</p>
-    <div *ngIf="currentRoute === '/player'">
-      <hr>
-      <app-character-edit [selectedCharacter]="character"></app-character-edit>
+  <h2>Choose an Adventurer</h2>
+
+  <div class="button">
+    <h3 routerLink="/player">or create your own</h3>
+  </div>
+
+  <div class="characters">
+
+    <div *ngFor="let character of characters | async"
+    class="character">
+        <h3 (click)="goToDetailPage(character)"><em>{{character.name}}</em>  {{character.gender}}</h3>
+        <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}} Inventory: {{character.inventory}} Gold: {{character.gold}}</h4>
+
+
+        <!-- <div *ngIf="currentRoute === '/character-list'"> -->
+        <div class="character-edit" id="characterEdit">
+          <app-character-edit [selectedCharacter]="character"></app-character-edit>
+        </div>
+        <br>
+        <button routerLink="/scene01">Start</button>
     </div>
+
   </div>
 </div>

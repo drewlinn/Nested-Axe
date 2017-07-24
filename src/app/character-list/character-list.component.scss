@@ -1,0 +1,69 @@
+@import "~assets/scss/variables.scss";
+@import "~assets/scss/mixins.scss";
+
+.page-flexbox-parent {
+
+  background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
+  background-size: cover;
+  position: relative;
+
+  //flex
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px;
+
+  h2 {
+    //color
+    color: white;
+
+    //typography
+    font-family: 'Metal Mania', cursive;
+    font-size: 50pt;
+
+    //alignment/layout
+    text-align: center;
+  }
+
+  .characters {//everything inside parchment
+    //flex
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .character {
+      //color
+      background: url('../../assets/images/parchment.png') center center no-repeat;
+      background-size: cover;
+
+      //size
+      height: 475px;
+      width: 300px;
+
+
+
+      // //flex
+      // flex-basis: 300px;
+
+      //margin/padding
+      margin: 20px;
+      padding: 20px;
+    }
+
+    button {
+      display: block;
+      margin:auto;
+    }
+
+  }
+}
+
+
+.character-edit {//div where the character edit component template will be passed thru
+
+}
+
+.show {
+  display: block;
+
+}
