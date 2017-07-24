@@ -38,6 +38,10 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
+    path: 'welcome',
+    component: WelcomeComponent
+  },
+  {
     path: 'scene01',
     component: Scene01Component
   },
@@ -56,6 +60,10 @@ const appRoutes: Routes = [
   {
     path: 'scene05',
     component: Scene05Component
+  },
+  {
+    path: 'scene06',
+    component: Scene06Component
   }
 ];
 
