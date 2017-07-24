@@ -14,8 +14,20 @@
 <router-outlet></router-outlet>
 <!-- <app-welcome></app-welcome> -->
 
-<!-- <footer class="footer">
+<footer class="footer">
   <div class="container">
-    <a class="text-muted" routerLink="player">Player</a>
+
+    <p>{{currentRoute}}</p>
+    <!-- <a class="text-muted" routerLink="player">Player</a> -->
+    <div *ngIf="currentRoute != '/'">
+      <h3>Name: {{characterToDisplay?.name}}</h3>
+      <h4>Gender: {{characterToDisplay?.gender}}</h4>
+      <p>Charisma: {{characterToDisplay?.charisma}}</p>
+      <p>Dexterity: {{characterToDisplay?.dexterity}}</p>
+      <p>Intelligence: {{characterToDisplay?.intelligence}}</p>
+      <p>Strength: {{characterToDisplay?.strength}}</p>
+      <p>Inventory: {{characterToDisplay?.inventory}}</p>
+      <p>Gold: {{characterToDisplay?.gold}}</p>
+    </div>
   </div>
-</footer> -->
+</footer>

@@ -33,7 +33,8 @@ export class CharacterDetailComponent implements OnInit {
                                       dataLastEmittedFromObserver.intelligence,
                                       dataLastEmittedFromObserver.strength,
                                       dataLastEmittedFromObserver.inventory,
-                                      dataLastEmittedFromObserver.gold)
+                                      dataLastEmittedFromObserver.gold,
+                                      dataLastEmittedFromObserver.scene)
    })
   }
 

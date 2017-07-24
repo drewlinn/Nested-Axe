@@ -42,7 +42,7 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
-    path: 'scene01',
+    path: 'scene01/:id',
     component: Scene01Component
   },
   {
