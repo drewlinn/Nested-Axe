@@ -1,3 +1,8 @@
 button {
   margin-top: 10px;
+  margin: auto;
+  box-shadow: 2px 2px 2px black;
+}
+button:hover {
+  box-shadow: none;
 }
