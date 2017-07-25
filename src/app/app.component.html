@@ -1,27 +1,23 @@
-<!-- <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Nested Axe</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="about">About</a></li>
-      <li><a routerLink="character-list">Characters List</a></li>
-    </ul>
-  </div>
-</nav> -->
-<!-- <div class="background">
-  <div class="content">
-    <img src="assets/images/parchment (1).png" alt="parchment">
-    <router-outlet class="router"></router-outlet>
-  </div>
-</div> -->
+<div *ngIf="currentRoute === '/'">
+  <app-welcome></app-welcome>
+</div>
 
-<!-- <app-welcome></app-welcome> -->
+<div *ngIf="currentRoute === '/character-list'">
+  <app-character-list></app-character-list>
+</div>
 
-
-<div class="container-fluid">
+<div *ngIf="currentRoute === '/player'">
+  <app-player></app-player>
+</div>
+<!--
+this is the parchment-background gameplay area, only displayed if you're NOT on one of the first 3 screens -->
+<!-- <div *ngIf="(currentRoute !== welcome || currentRoute !== character-list || currentRoute !== player)" class="container-fluid">
   <a class="text-muted" routerLink="player">Player</a>
   <div class="row">
-    <router-outlet class="router"></router-outlet>
+    <div class="row background">
+      <div class="scene col-md-10-offset-1">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </div>
-</div>
+</div> -->

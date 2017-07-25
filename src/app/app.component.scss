@@ -1,1 +1,49 @@
+.background {
+  max-height: 100%;
+  height: 100vh;
+  background: url('../assets/images/woody.jpg') center center no-repeat;
+  background-size: cover;
+  border: 2px solid lime;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.scene {
+  background: url('../assets/images/parchmentWide.png') center center no-repeat;
+  background-size: cover;
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding: 50px;
+  .da-image {
+    width: 80%;
+    min-width: 375px;
+    height: 450px;
+    display: block;
+    margin: auto;
+  }
 
+}
+
+@media screen and (max-width: 865px) {
+  .background {
+    justify-content: flex-start;
+    .scene {
+      border: 2px solid red;
+      width: 100%;
+      padding: 0px;
+      .da-image {
+        padding-top: 0;
+        padding-bottom: 20px;
+        width: 100%;
+        height: 425px
+      }
+      button {
+        display: block;
+        margin: 15px auto;
+        padding: 10px;
+
+      }
+    }
+  }
+}

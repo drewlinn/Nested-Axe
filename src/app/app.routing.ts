@@ -23,12 +23,12 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
-    path: 'player',
-    component: PlayerComponent
-  },
-  {
     path: 'character-list',
     component: CharacterListComponent
+  },
+  {
+    path: 'player',
+    component: PlayerComponent
   },
   {
     path: 'characters/:id',
@@ -37,10 +37,6 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
-  },
-  {
-    path: 'welcome',
-    component: WelcomeComponent
   },
   {
     path: 'scenehold',
