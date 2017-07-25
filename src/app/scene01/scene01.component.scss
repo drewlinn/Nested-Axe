@@ -1,18 +1,49 @@
+
+.background {
+  max-height: 100%;
+  height: 100vh;
+  background: url('../../assets/images/woody.jpg') center center no-repeat;
+  background-size: cover;
+  border: 2px solid lime;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .scene01 {
-  // background: url('../../assets/images/jail-cell-2-pixelated.png') center center no-repeat;
-  // background-size: cover;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  border: 2px solid teal;
-  width: 60%;
+  background: url('../../assets/images/parchmentWide.png') center center no-repeat;
+  background-size: cover;
+  width: 80%;
   display: block;
   margin: auto;
-
+  padding: 50px;
 
   img {
-    width: 100%;
+    width: 80%;
+    min-width: 375px;
+    height: 450px;
     display: block;
     margin: auto;
+  }
+}
+@media screen and (max-width: 865px) {
+  .background {
+    justify-content: flex-start;
+    .scene01 {
+      border: 2px solid red;
+      width: 100%;
+      padding: 0px;
+      img {
+        padding-top: 0;
+        padding-bottom: 20px;
+        width: 100%;
+        height: 425px
+      }
+      button {
+        display: block;
+        margin: 15px auto;
+        padding: 10px;
+
+      }
+    }
   }
 }
