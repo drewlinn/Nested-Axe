@@ -1,163 +1,166 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Create A New Character!</h3>
-  </div>
-  <div class="panel-body">
+<div class="page">
+  <h2 class="sub-title">Create A New Adventurer!</h2>
+
+  <form id="addPerson" class="background">
+
+    <!-- name -->
     <div>
-      <form id="addPerson">
-      <div>
-        <label>Character Name:</label>
+      <label>Character Name:</label>
+      <br>
+      <input #newName>
+    </div>
+
+    <!-- gender -->
+    <div>
+      <label>Character Gender:</label>
+      <br>
+      <select #newGender>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <!-- {{charisma}} {{dexterity}} {{intelligence}} {{strength}} -->
+
+    <!-- your mother was a... -->
+    <div>
+      <label>Your father was a humble lumberjack. He worked hard every single day chopping down mighty trees and hauling the wood to sell in the village.
+
+        Your mother was a ... </label>
         <br>
-        <input #newName>
+        <div class="radio">
+          <label>
+            <input type="radio" class="mother" name="mother" value="char">
+            Barmaid
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" class="mother" name="mother" value="dex" >
+            Seamstress
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" class="mother" name="mother" value="intel">
+            Cook
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" class="mother" name="mother" value="strength">
+            Farmgirl
+          </label>
+        </div>
       </div>
 
-     <div>
-       <label>Character Gender:</label>
-       <br>
-       <select #newGender>
-         <option>Female</option>
-         <option>Male</option>
-         <option>Other</option>
-       </select>
-     </div>
-     <!-- {{charisma}} {{dexterity}} {{intelligence}} {{strength}} -->
-     <div>
-       <label>Your father was a humble lumberjack. He worked hard every single day chopping down mighty trees and hauling the wood to sell in the village.
+      <!-- as a child... -->
+      <div>
+        <label>As a child you spent most of your time...</label>
+        <br>
+        <div class="radio">
+          <label>
+            <input type="radio" name="childhood" value="char">
+            Helping your mother around the house.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="childhood" value="dex">
+            Running and playing in the nearby woods.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="childhood" value="intel">
+            Listening to the stories of the Village Elders.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="childhood" value="strength">
+            Helping your father cut and haul lumber.
+          </label>
+        </div>
+      </div>
 
-       Your mother was a ... </label>
-       <br>
-       <div class="radio">
+      <!-- as a young adult, you apprenticed with... -->
+      <div>
+        <label>As a young adult you apprenticed with...</label>
+        <br>
 
-         <label>
-           <input type="radio" class="mother" name="mother" value="char">
-           Barmaid
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" class="mother" name="mother" value="dex" >
-           Seamstress
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" class="mother" name="mother" value="intel">
-           Cook
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" class="mother" name="mother" value="strength">
-           Farmgirl
-         </label>
-       </div>
-     </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="apprentice" value="char"  #firstQ>
+            Your father
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="apprentice" value="dex"  #firstQ>
+            The Innkeeper
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="apprentice" value="intel">
+            The Clergyman
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="apprentice" value="strength">
+            The Stablemaster
+          </label>
+        </div>
+      </div>
 
-     <div>
-       <label>As a child you spent most of your time...</label>
-       <br>
-       <div class="radio">
-         <label>
-           <input type="radio" name="childhood" value="char">
-           Helping your mother around the house.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="childhood" value="dex">
-           Running and playing in the nearby woods.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="childhood" value="intel">
-           Listening to the stories of the Village Elders.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="childhood" value="strength">
-           Helping your father cut and haul lumber.
-         </label>
-       </div>
-     </div>
+      <!-- one harsh winter, you decided to... -->
+      <div>
+        <label>One particularly harsh Winter, food and money were scarce. In an act of desperation to feed his family, your father stole some food so your family could make  it through til spring. Unfortunately, the people that the food belonged to were well connected with the local lord, who then had your father executed for theft. This  left your mother bereft of a means of living, so you decided to...</label>
+        <br>
 
-     <div>
-       <label>As a young adult you apprenticed with...</label>
-       <br>
-
-       <div class="radio">
-         <label>
-           <input type="radio" name="apprentice" value="char"  #firstQ>
-           Your father
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="apprentice" value="dex"  #firstQ>
-           The Innkeeper
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="apprentice" value="intel">
-           The Clergyman
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="apprentice" value="strength">
-           The Stablemaster
-         </label>
-       </div>
-     </div>
-
-     <div>
-       <label>One particularly harsh Winter, food and money were scarce. In an act of desperation to feed his family, your father stole some food so your family could make it through til spring. Unfortunately, the people that the food belonged to were well connected with the local lord, who then had your father executed for theft. This left your mother bereft of a means of living, so you decided to...</label>
-       <br>
-
-       <div class="radio">
-         <label>
-           <input type="radio" name="living" value="char">
-           Take over the family business, chopping wood.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="living" value="dex">
-           Roam the woods as a hunter.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="living" value="intel">
-           Become a scholar.
-         </label>
-       </div>
-       <div class="radio">
-         <label>
-           <input type="radio" name="living" value="strength">
-           Join the Village Militia.
-         </label>
-       </div>
-     </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="living" value="char">
+            Take over the family business, chopping wood.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="living" value="dex">
+            Roam the woods as a hunter.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="living" value="intel">
+            Become a scholar.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="living" value="strength">
+            Join the Village Militia.
+          </label>
+        </div>
+      </div>
 
 
-     <button routerLink="/character-list" (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
-   </form>
+      <button routerLink="/character-list" (click)="submitForm(newName.value, newGender.value); newName.value=''; newGender.value=''">Add</button>
+    </form>
 
-
-    </div>
-  </div>
 </div>
 
+
+
 <!-- <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Or select and/or edit one from our list:</h3>
-  </div>
-  <div class="panel-body">
-    <div>
-      <app-character-list></app-character-list>
-    </div>
-  </div>
+<div class="panel-heading">
+<h3 class="panel-title">Or select and/or edit one from our list:</h3>
+</div>
+<div class="panel-body">
+<div>
+<app-character-list></app-character-list>
+</div>
+</div>
 </div> -->
