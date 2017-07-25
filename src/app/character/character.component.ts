@@ -6,14 +6,14 @@ import { CharacterService } from '../character.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-character-detail',
-  templateUrl: './character-detail.component.html',
-  styleUrls: ['./character-detail.component.scss'],
+  selector: 'app-character',
+  templateUrl: './character.component.html',
+  styleUrls: ['./character.component.scss'],
   providers: [CharacterService]
 })
-export class CharacterDetailComponent implements OnInit {
+export class CharacterComponent implements OnInit {
   characterId: string;
-  characterToDisplay: Character;
+  activeCharacter: Character;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,14 +22,11 @@ export class CharacterDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    // this.characterService.getActiveCharacter() {};
-
     this.route.params.forEach((urlParametersArray) => {
      this.characterId = urlParametersArray['id'];
    });
    this.characterService.getCharacterById(this.characterId).subscribe(dataLastEmittedFromObserver => {
-     this.characterToDisplay = new Character(dataLastEmittedFromObserver.name,
+     this.activeCharacter = new Character(dataLastEmittedFromObserver.name,
                                       dataLastEmittedFromObserver.gender,
                                       dataLastEmittedFromObserver.charisma,
                                       dataLastEmittedFromObserver.dexterity,
@@ -38,7 +35,6 @@ export class CharacterDetailComponent implements OnInit {
                                       dataLastEmittedFromObserver.inventory,
                                       dataLastEmittedFromObserver.gold,
                                       dataLastEmittedFromObserver.scene)
-
    })
   }
 

@@ -9,14 +9,6 @@
   <option>Male</option>
   <option>Other</option>
 </select>
-
-<br>
-<label>New Character Inventory:</label>
-<input [(ngModel)]="selectedCharacter.inventory">
-<br>
-<label>New Character Gold:</label>
-<input [(ngModel)]="selectedCharacter.gold">
-<br>
 <button (click)="beginUpdatingCharacter(selectedCharacter)">Update</button>
 
 <button (click)="beginDeletingCharacter(selectedCharacter)">Delete</button>
