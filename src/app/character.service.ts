@@ -4,7 +4,6 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import { ActivatedRoute, Params } from '@angular/router';
 import { Http, Response } from '@angular/http';
 
-
 @Injectable()
 export class CharacterService {
   characters: FirebaseListObservable<any[]>;
@@ -39,6 +38,10 @@ export class CharacterService {
                                 gold: localUpdatedCharacter.gold,
                                 scene: localUpdatedCharacter.scene});
   }
+  getCharacter(key) {
+    return this.http.get("https://chooseyour-own-adventure.firebaseio.com/characters/" + key + ".json?print=pretty");
+
+  }
 
   deleteCharacter(localCharacterToDelete){
     var characterEntryInFirebase = this.getCharacterById(localCharacterToDelete.$key);
@@ -61,9 +64,4 @@ export class CharacterService {
   //
   //   })
   // }
-
-  getCharacter(key) {
-    return this.http.get("https://chooseyour-own-adventure.firebaseio.com/characters/" + key + ".json?print=pretty");
-
-  }
 }

@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 
 //scene components
+import { StartPageComponent } from './start-page/start-page.component';
 import { Scene01Component } from './scene01/scene01.component';
 import { Scene02Component } from './scene02/scene02.component';
 import { Scene03Component } from './scene03/scene03.component';
@@ -43,6 +44,10 @@ const appRoutes: Routes = [
   },
   {
     path: 'scene01/:id',
+    component: StartPageComponent
+  },
+  {
+    path: 'scene01',
     component: Scene01Component
   },
   {
