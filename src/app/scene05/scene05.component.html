@@ -1,5 +1,25 @@
-<p>
-  scene05 works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <h5>
+      <span>Name: {{activeCharacter?.name}}</span>
+      <span>Gender: {{activeCharacter?.gender}}</span>
+       <span>Charisma: {{activeCharacter?.charisma}}</span>
+       <span>Dexterity: {{activeCharacter?.dexterity}}</span>
+       <span>Intelligence: {{activeCharacter?.intelligence}}</span>
+       <span>Strength: {{activeCharacter?.strength}}</span>
+       <span>Inventory: {{activeCharacter?.inventory}}</span>
+       <span>Gold: {{activeCharacter?.gold}}</span>
+    </h5>
+  </div>
+</div>
+<div class="row background">
+  <div class="scene01 col-md-10-offset-1">
+    <img src="../assets/images/jail-cell-2-pixelated.png" alt="">
+    <div class="belowScene">
+      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?</h3>
+      <h4 routerLink="/scene02">Decision A <span class="glyphicon glyphicon-chevron-left"></span></h4>
 
-<p>result 2</p>
+      <h4 routerLink="/scene03">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
+    </div>
+  </div>
+</div>
