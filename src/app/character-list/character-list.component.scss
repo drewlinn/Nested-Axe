@@ -5,7 +5,6 @@
 
   //height/width
   height: 100%;
-
   background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
   background-size: cover;
   position: relative;
@@ -55,8 +54,6 @@
       height: 475px;
       width: 300px;
 
-
-
       // //flex
       // flex-basis: 300px;
 
@@ -64,7 +61,17 @@
       margin: 20px;
       padding: 20px;
     }
+    .glyphicon-chevron-left {
+      display: none;
+    }
+    .character:hover {
+      .glyphicon-chevron-left {
+        display: inline;
+        color: red;
+        // transform: translate(90deg);
 
+      }
+    }
     button {
       display: block;
       margin:auto;
