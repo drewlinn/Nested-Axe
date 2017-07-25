@@ -4,29 +4,20 @@
     <div class="button">
       <h3 routerLink="/player">or create your own</h3>
     </div>
-
   </div>
-
-
-
   <div class="characters">
-
-    <div class="hover-character character" *ngFor="let character of characters | async"
-    >
-        <h3 (click)="goToDetailPage(character)"><em>{{character.name}}</em>      {{character.gender}} 
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </h3>
-
-        <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}} Inventory: {{character.inventory}} Gold: {{character.gold}}</h4>
-
-
+    <div class="hover-character character" *ngFor="let character of characters | async">
+      <h3 (click)="goToDetailPage(character)"><em>{{character.name}}</em>      {{character.gender}}
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </h3>
+      <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}} Inventory: {{character.inventory}} Gold: {{character.gold}}
+      </h4>
         <!-- <div *ngIf="currentRoute === '/character-list'"> -->
-        <div class="character-edit" id="characterEdit">
-          <app-character-edit [selectedCharacter]="character"></app-character-edit>
-        </div>
-        <br>
-        <button routerLink="/scene01">Select this Adventurer</button>
+      <div class="character-edit" id="characterEdit">
+        <app-character-edit [selectedCharacter]="character"></app-character-edit>
+      </div>
+      <br>
+      <button routerLink="/scene01">Select this Adventurer</button>
     </div>
-
   </div>
 </div>
