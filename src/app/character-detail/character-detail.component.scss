@@ -1,0 +1,20 @@
+@import "~assets/scss/mixins.scss";
+@import "~assets/scss/headings.scss";
+
+.background {
+  background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
+  background-size: cover;
+  min-height: (100vh-4vh);
+  .parchment-bg {
+    //background
+    background: url('../../assets/images/parchment.png') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    //padding
+    padding: 40px 80px;
+    @include desktop {
+      padding: 40px 120px;
+    }
+  }
+}

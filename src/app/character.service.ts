@@ -36,9 +36,10 @@ export class CharacterService {
   }
   getCharacter(key) {
     return this.http.get("https://chooseyour-own-adventure.firebaseio.com/characters/" + key + ".json?print=pretty");
-
   }
-
+  // playCharacter(chosenCharacter){
+  //
+  // }
   deleteCharacter(localCharacterToDelete){
     var characterEntryInFirebase = this.getCharacterById(localCharacterToDelete.$key);
     characterEntryInFirebase.remove();

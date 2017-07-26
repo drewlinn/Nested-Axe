@@ -1,10 +1,11 @@
 @import "~assets/scss/variables.scss";
 @import "~assets/scss/mixins.scss";
+@import "~assets/scss/headings.scss";
 
 .page-flexbox-parent {
 
-  //height/width
-  height: 100%;
+  // //height/width
+  // height: 100%;
   background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
   background-size: cover;
   position: relative;
@@ -16,27 +17,31 @@
 
   padding: 40px;
 
-  h2 {
-    //color
-    color: white;
-
-    //typography
-    font-family: 'Metal Mania', cursive;
-    font-size: 50pt;
-
-    //alignment/layout
-    text-align: center;
-  }
 
   .flex-text {
     display: flex;
     flex-direction: column;
 
     .button{
-      margin-top: 10px;
+      //positioning
       width: 250px;
+      display: block;
+      margin: 15px auto;
       text-align: center;
+
+      //color/border
+      color: white;
+      border: 3px solid white;
+      border-radius: 3px;
+
+      //cursor
+      cursor: pointer;
+
+      h3 {
+        margin: 6px;
+      }
     }
+
   }
 
   .characters {//everything inside parchment
@@ -61,6 +66,14 @@
       margin: 20px;
       padding: 20px;
     }
+
+    h3 {
+      cursor: pointer;
+    }
+
+    h4 span {
+      margin-left: 22px;
+    }
     .glyphicon-chevron-left {
       display: none;
     }
@@ -75,10 +88,13 @@
     button {
       display: block;
       margin:auto;
-      box-shadow: 2px 2px 2px black;
+      box-shadow: 2px 2px 2px 2px black;
+      background: none;
+      border: none;
     }
     button:hover {
       box-shadow: none;
+      border: 1px solid black;
     }
   }
 }

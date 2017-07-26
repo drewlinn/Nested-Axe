@@ -90,8 +90,6 @@ export class PlayerComponent implements OnInit {
     this.popLockItDropIt();
     console.log(this.charisma);
 
-
-
   }
 
 }
