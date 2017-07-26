@@ -9,20 +9,19 @@ import { CharacterComponent } from '../character/character.component';
   providers: [CharacterService]
 })
 export class Scene01Component implements OnInit {
+  characterId: string;
   constructor( private characterService: CharacterService ) { }
-
   ngOnInit() {
-    // this.characterService.getCharacter().subscribe(response => {
-    // this.activeCharacter = response.json();
-    // console.log(response.json().scene);
-    // });
    }
 
   scene02Change(activeCharacter){
+    this.characterId = activeCharacter.activeCharacter.characterId;
     activeCharacter.activeCharacter.scene = "scene02";
+    this.characterService.updateCharacter(activeCharacter.characterId);
     console.log(activeCharacter.activeCharacter);
+    console.log(this.characterId);
   }
   scene03Change(activeCharacter){
-    activeCharacter.scene = "scene03";
+    activeCharacter.activeCharacter.scene = "scene03";
   }
 }

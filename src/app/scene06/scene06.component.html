@@ -1,15 +1,7 @@
 <div class="row">
   <div class="col-md-12 status-bar">
-    <h5>
-      <span>Name: {{activeCharacter?.name}}</span>
-      <span>Gender: {{activeCharacter?.gender}}</span>
-       <span>Charisma: {{activeCharacter?.charisma}}</span>
-       <span>Dexterity: {{activeCharacter?.dexterity}}</span>
-       <span>Intelligence: {{activeCharacter?.intelligence}}</span>
-       <span>Strength: {{activeCharacter?.strength}}</span>
-       <span>Inventory: {{activeCharacter?.inventory}}</span>
-       <span>Gold: {{activeCharacter?.gold}}</span>
-    </h5>
+    <app-character #activeCharacter></app-character>
+    <h2>{{activeCharacter.activeCharacter.scene}}</h2>
   </div>
 </div>
 <div class="row background">
@@ -18,7 +10,7 @@
     <div class="belowScene">
       <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?</h3>
 
-      <h4 routerLink="/scene07">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h4 routerLink="/scene07/{{activeCharacter.characterId}}" (click)="scene07Change(activeCharacter)">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
     </div>
   </div>
 </div>

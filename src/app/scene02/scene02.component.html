@@ -8,14 +8,9 @@
     <img src="../assets/images/tavern.jpg" alt="">
     <div class="belowScene">
       <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?</h3>
-      <h4 routerLink="/scene04">Decision A <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h4 routerLink="/scene04/{{activeCharacter.characterId}}" (click)="scene04Change(activeCharacter)">Decision A <span class="glyphicon glyphicon-chevron-left"></span></h4>
 
-      <h4 routerLink="/scene06">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h4 routerLink="/scene05/{{activeCharacter.characterId}}" (click)="scene05Change(activeCharacter)">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
     </div>
   </div>
 </div>
-<button routerLink="/scene04">Decision A</button>
-
-<button routerLink="/scene05">Decision B</button>
-
-<app-character></app-character>

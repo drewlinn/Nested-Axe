@@ -1,7 +1,6 @@
 <div class="row">
   <div class="col-md-12 status-bar">
     <app-character #activeCharacter></app-character>
-    <h1>{{activeCharacter.characterId}}</h1>
   </div>
 </div>
 <div class="row background">
@@ -13,13 +12,7 @@
       <h4 routerLink="/scene02/{{activeCharacter.characterId}}" (click)="scene02Change(activeCharacter)">Decision A <span class="glyphicon glyphicon-chevron-left"></span></h4>
 
 
-      <h4 routerLink="/scene03">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h4 routerLink="/scene03/{{activeCharacter.characterId}}" (click)="scene03Change(activeCharacter)">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
     </div>
   </div>
 </div>
-<p>
-  You are in a Jail Cell!(scene01)
-</p>
-<!-- <button routerLink="../{{activeCharacter.scene}}" (click)="scene02Change()">Decision A</button>
-
-<button routerLink="/scene03" (click)="scene03Change()">Decision B</button> -->

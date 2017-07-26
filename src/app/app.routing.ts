@@ -57,23 +57,23 @@ const appRoutes: Routes = [
     component: Scene02Component
   },
   {
-    path: 'scene03',
+    path: 'scene03/:id',
     component: Scene03Component
   },
   {
-    path: 'scene04',
+    path: 'scene04/:id',
     component: Scene04Component
   },
   {
-    path: 'scene05',
+    path: 'scene05/:id',
     component: Scene05Component
   },
   {
-    path: 'scene06',
+    path: 'scene06/:id',
     component: Scene06Component
   },
   {
-    path: 'scene07',
+    path: 'scene07/:id',
     component: Scene07Component
   }
 ];
