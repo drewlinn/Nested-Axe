@@ -1,11 +1,17 @@
 button {
-  margin-top: 10px;
-  margin: auto;
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 2px 2px black;
+  background: none;
+  border: none;
+  margin-left: 50px;
 }
 button:hover {
   box-shadow: none;
+  border: 1px solid black;
+}
+select {
+  background: none;
 }
 select:hover {
   border: 1px solid red;
+  background: none;
 }

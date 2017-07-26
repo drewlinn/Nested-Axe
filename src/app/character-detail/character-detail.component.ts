@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Character } from '../character.model';
 import { CharacterService } from '../character.service';
-import { FirebaseObjectObservable } from 'angularfire2/database';
+import { FirebaseListObservable, FirebaseObjectObservable, } from 'angularfire2/database';
+
+import { CharacterListComponent } from '../character-list/character-list.component';
 
 @Component({
   selector: 'app-character-detail',
@@ -13,8 +15,19 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 })
 export class CharacterDetailComponent implements OnInit {
   characterId: string;
-  characterToDisplay: Character;
 
+  @Input(this.selectedCharacter) chosenCharacter: any;
+  characterToDisplay: Character;
+  private storage;
+  // set name(name: string) {
+  //   this._name = (name && name.trim()) || '<no name set>';
+  // }
+
+  @Input()
+  get selectedCharacter(): Character { return this.selectedCharacter; }
+
+  // charactersEmit() {
+  // }
   constructor(
     private route: ActivatedRoute,
     private location: Location,
@@ -22,6 +35,8 @@ export class CharacterDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.storage = this.characterService.getCharacters();
+    console.log(this.chosenCharacter);
     this.route.params.forEach((urlParametersArray) => {
      this.characterId = urlParametersArray['id'];
    });
@@ -38,3 +53,5 @@ export class CharacterDetailComponent implements OnInit {
   }
 
 }
+
+console.log(this.selectedCharacter);

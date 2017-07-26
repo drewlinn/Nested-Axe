@@ -61,6 +61,9 @@
       margin: 20px;
       padding: 20px;
     }
+    h4 span {
+      margin-left: 22px;
+    }
     .glyphicon-chevron-left {
       display: none;
     }
@@ -75,10 +78,13 @@
     button {
       display: block;
       margin:auto;
-      box-shadow: 2px 2px 2px black;
+      box-shadow: 2px 2px 2px 2px black;
+      background: none;
+      border: none;
     }
     button:hover {
       box-shadow: none;
+      border: 1px solid black;
     }
   }
 }
