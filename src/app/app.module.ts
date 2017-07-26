@@ -23,6 +23,8 @@ import { Scene07Component } from './scene07/scene07.component';
 import { AboutComponent } from './about/about.component';
 import { CharacterComponent } from './character/character.component';
 import { StartPageComponent } from './start-page/start-page.component';
+import { StatusBarComponent } from './status-bar/status-bar.component';
+import { GameOverComponent } from './game-over/game-over.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -39,15 +41,17 @@ export const firebaseConfig = {
     CharacterListComponent,
     CharacterDetailComponent,
     CharacterEditComponent,
+    CharacterComponent,
     Scene01Component,
     Scene02Component,
     Scene03Component,
     Scene04Component,
     Scene05Component,
     Scene06Component,
-    AboutComponent,
     Scene07Component,
-    CharacterComponent
+    AboutComponent,
+    StatusBarComponent,
+    GameOverComponent
   ],
   imports: [
     BrowserModule,

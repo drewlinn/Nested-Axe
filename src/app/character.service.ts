@@ -10,7 +10,7 @@ export class CharacterService {
   characterId: string;
   characterToDisplay: Character;
 
-  constructor(private http: Http, private database: AngularFireDatabase, private route: ActivatedRoute ) {
+  constructor( private http: Http, private database: AngularFireDatabase, private route: ActivatedRoute ) {
     this.characters = database.list('characters');
   }
 
@@ -38,15 +38,12 @@ export class CharacterService {
                                 gold: localUpdatedCharacter.gold,
                                 scene: localUpdatedCharacter.scene});
   }
-  getCharacter(key) {
-    return this.http.get("https://chooseyour-own-adventure.firebaseio.com/characters/" + key + ".json?print=pretty");
 
-  }
 
   deleteCharacter(localCharacterToDelete){
     var characterEntryInFirebase = this.getCharacterById(localCharacterToDelete.$key);
     characterEntryInFirebase.remove();
   }
 
-  
+
 }

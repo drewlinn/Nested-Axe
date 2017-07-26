@@ -3,7 +3,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Character } from '../character.model';
 import { CharacterService } from '../character.service';
-import { FirebaseObjectObservable } from 'angularfire2/database';
+import { FirebaseListObservable, FirebaseObjectObservable, } from 'angularfire2/database';
+
+import { CharacterListComponent } from '../character-list/character-list.component';
 
 @Component({
   selector: 'app-character-detail',
@@ -14,8 +16,10 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class CharacterDetailComponent implements OnInit {
   characterId: string;
   characterToDisplay: Character;
-  // @Input() clickedCharacter: Character;
-  // @Output() clickSender = new EventEmitter;
+  // @Input(this.selectedCharacter) chosenCharacter: any;
+  // @Input()
+  // get selectedCharacter(): Character { return this.selectedCharacter; }
+
 
   constructor(
     private route: ActivatedRoute,
@@ -39,8 +43,5 @@ export class CharacterDetailComponent implements OnInit {
                                       dataLastEmittedFromObserver.scene)
 
    })
-  }
-  selectCharacter(character) {
-    let activeCharacter = this.characterService.getCharacter(this.characterId);
   }
 }

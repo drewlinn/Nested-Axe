@@ -1,12 +1,14 @@
-<div>
-  <h3>Name: {{characterToDisplay?.name}}</h3>
-  <h4>Gender: {{characterToDisplay?.gender}}</h4>
-  <p>Charisma: {{characterToDisplay?.charisma}}</p>
-  <p>Dexterity: {{characterToDisplay?.dexterity}}</p>
-  <p>Intelligence: {{characterToDisplay?.intelligence}}</p>
-  <p>Strength: {{characterToDisplay?.strength}}</p>
-  <p>Inventory: {{characterToDisplay?.inventory}}</p>
-  <p>Gold: {{characterToDisplay?.gold}}</p>
+<div class="background">
+  <div class="parchment-bg">
+    <h3>Name:<em> {{characterToDisplay?.name}}</em></h3>
+    <h4>Gender: {{characterToDisplay?.gender}}</h4>
+    <p><strong>Charisma:</strong> {{characterToDisplay?.charisma}}</p>
+    <p><strong>Dexterity:</strong> {{characterToDisplay?.dexterity}}</p>
+    <p><strong>Intelligence:</strong> {{characterToDisplay?.intelligence}}</p>
+    <p><strong>Strength:</strong> {{characterToDisplay?.strength}}</p>
+    <p><strong>Inventory:</strong> {{characterToDisplay?.inventory}}</p>
+    <p><strong>Gold:</strong> {{characterToDisplay?.gold}}</p>
+    <button routerLink="../../{{characterToDisplay?.scene}}/{{this.characterId}}">Select this Adventurer</button>
+  </div>
 
-  <button routerLink="../../{{characterToDisplay?.scene}}/{{this.characterId}}" (click)="selectCharacter(characterToDisplay)">Select this Adventurer</button>
 </div>

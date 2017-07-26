@@ -1,33 +1,31 @@
 <div class="page-flexbox-parent">
   <div class="flex-text">
-    <h2>Choose an Adventurer</h2>
+    <h2 class="sub-title">Choose an Adventurer</h2>
     <div class="button">
       <h3 routerLink="/player">or create your own</h3>
     </div>
   </div>
   <div class="characters">
     <div class="hover-character character" *ngFor="let character of characters | async">
-      <h3 (click)="goToDetailPage(character)"><em>{{character.name}}</em>      {{character.gender}}
+      <h3 (click)="goToDetailPage(character)"><em>{{character.name.substr(0,17)}} <span *ngIf="character.name.substr(0,17).length >= 17">...</span></em>
         <span class="glyphicon glyphicon-chevron-left"></span>
       </h3>
-      <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}} Inventory: {{character.inventory}} Gold: {{character.gold}}
+      <h4>{{character.gender}}</h4>
+      <h4>
+        <span>Charisma: {{character.charisma}}</span>
+        <span>Dexterity: {{character.dexterity}}</span>
       </h4>
-        <!-- <div *ngIf="currentRoute === '/character-list'"> -->
+      <h4>
+        <span>Intelligence: {{character.intelligence}}</span>
+        <span>Strength: {{character.strength}}</span>
+      </h4>
+      <h4>
+        <span>Inventory: {{character.inventory}}</span>
+        <span>Gold: {{character.gold}}</span>
+      </h4>
       <div class="character-edit" id="characterEdit">
         <app-character-edit [selectedCharacter]="character"></app-character-edit>
       </div>
       <br>
-      <!-- <button routerLink="/scene01">Select this Adventurer</button> -->
-    <!-- <div *ngFor="let character of characters | async"
-    class="character">
-        <h3 (click)="goToDetailPage(character)"><em>{{character.name}}</em>  {{character.gender}}</h3>
-        <h4>Charisma: {{character.charisma}} Dexterity: {{character.dexterity}} Intelligence: {{character.intelligence}} Strength: {{character.strength}} Inventory: {{character.inventory}} Gold: {{character.gold}}</h4>
-
-        <div *ngIf="currentRoute === '/character-list'">
-        <div class="character-edit" id="characterEdit">
-          <app-character-edit [selectedCharacter]="character"></app-character-edit>
-        </div>
-        <br>
-    </div> -->
   </div>
 </div>
