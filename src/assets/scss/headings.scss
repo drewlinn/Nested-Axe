@@ -1,4 +1,24 @@
-//titles and sub-titles
+@import "~assets/scss/mixins.scss";
+
+.title {
+  //color
+  color: white;
+
+  //typography
+  font-family: 'Metal Mania', cursive;
+  font-size: 75pt;
+  @include tablet {
+    font-size: 100pt;
+  }
+  @include desktop {
+    font-size: 150pt;
+  }
+
+
+  //alignment/layout
+  text-align: center;
+}
+
 .sub-title {
   //color
   color: white;

@@ -17,6 +17,7 @@ import { Scene04Component } from './scene04/scene04.component';
 import { Scene05Component } from './scene05/scene05.component';
 import { Scene06Component } from './scene06/scene06.component';
 import { Scene07Component } from './scene07/scene07.component';
+import { GameOverComponent } from './game-over/game-over.component';
 
 const appRoutes: Routes = [
   {
@@ -74,6 +75,10 @@ const appRoutes: Routes = [
   {
     path: 'scene07',
     component: Scene07Component
+  },
+  {
+    path: 'game-over',
+    component: GameOverComponent
   }
 ];
 

@@ -1,0 +1,23 @@
+@import "~assets/scss/mixins.scss";
+@import "~assets/scss/headings.scss";
+
+.background {
+  background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
+  background-size: cover;
+  min-height: 98vh;
+
+  padding: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bottom {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+  }
+
+}
