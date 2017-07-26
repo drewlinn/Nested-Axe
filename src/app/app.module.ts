@@ -19,9 +19,10 @@ import { Scene03Component } from './scene03/scene03.component';
 import { Scene04Component } from './scene04/scene04.component';
 import { Scene05Component } from './scene05/scene05.component';
 import { Scene06Component } from './scene06/scene06.component';
-import { AboutComponent } from './about/about.component';
-import { StartPageComponent } from './start-page/start-page.component';
 import { Scene07Component } from './scene07/scene07.component';
+import { AboutComponent } from './about/about.component';
+import { CharacterComponent } from './character/character.component';
+import { StartPageComponent } from './start-page/start-page.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -45,8 +46,8 @@ export const firebaseConfig = {
     Scene05Component,
     Scene06Component,
     AboutComponent,
-    StartPageComponent,
-    Scene07Component
+    Scene07Component,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

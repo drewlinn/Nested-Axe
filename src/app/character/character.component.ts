@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Character } from '../character.model';
@@ -6,16 +6,14 @@ import { CharacterService } from '../character.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-character-detail',
-  templateUrl: './character-detail.component.html',
-  styleUrls: ['./character-detail.component.scss'],
+  selector: 'app-character',
+  templateUrl: './character.component.html',
+  styleUrls: ['./character.component.scss'],
   providers: [CharacterService]
 })
-export class CharacterDetailComponent implements OnInit {
+export class CharacterComponent implements OnInit {
   characterId: string;
-  characterToDisplay: Character;
-  // @Input() clickedCharacter: Character;
-  // @Output() clickSender = new EventEmitter;
+  activeCharacter: Character;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +26,7 @@ export class CharacterDetailComponent implements OnInit {
      this.characterId = urlParametersArray['id'];
    });
    this.characterService.getCharacterById(this.characterId).subscribe(dataLastEmittedFromObserver => {
-     this.characterToDisplay = new Character(dataLastEmittedFromObserver.name,
+     this.activeCharacter = new Character(dataLastEmittedFromObserver.name,
                                       dataLastEmittedFromObserver.gender,
                                       dataLastEmittedFromObserver.charisma,
                                       dataLastEmittedFromObserver.dexterity,
@@ -37,10 +35,7 @@ export class CharacterDetailComponent implements OnInit {
                                       dataLastEmittedFromObserver.inventory,
                                       dataLastEmittedFromObserver.gold,
                                       dataLastEmittedFromObserver.scene)
-
+                                      console.log(this.activeCharacter);
    })
-  }
-  selectCharacter(character) {
-    let activeCharacter = this.characterService.getCharacter(this.characterId);
   }
 }
