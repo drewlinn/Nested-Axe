@@ -75,10 +75,13 @@
     button {
       display: block;
       margin:auto;
-      box-shadow: 2px 2px 2px black;
+      box-shadow: 2px 2px 2px 2px black;
+      background: none;
+      border: none;
     }
     button:hover {
       box-shadow: none;
+      border: 1px solid black;
     }
   }
 }
