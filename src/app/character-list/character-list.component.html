@@ -7,7 +7,7 @@
   </div>
   <div class="characters">
     <div class="hover-character character" *ngFor="let character of characters | async">
-      <h3 (click)="goToDetailPage(character)"><em>{{character.name.substr(0,19)}} <span *ngIf="character.name.substr(0,19).length >= 19">...</span></em>
+      <h3 (click)="goToDetailPage(character)"><em>{{character.name.substr(0,17)}} <span *ngIf="character.name.substr(0,17).length >= 17">...</span></em>
         <span class="glyphicon glyphicon-chevron-left"></span>
       </h3>
       <h4>{{character.gender}}</h4>
