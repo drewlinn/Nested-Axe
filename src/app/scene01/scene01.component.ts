@@ -15,6 +15,7 @@ import { Component,
   styleUrls: ['./scene01.component.scss'],
 })
 export class Scene01Component implements OnInit {
+  // @Input() 
 
   constructor() { }
 
