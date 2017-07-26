@@ -1,17 +1,28 @@
+@import "~assets/scss/mixins.scss";
+@import "~assets/scss/headings.scss";
+
+//entire page
 .page {
+  //margin/padding
   padding: 20px 40px;
 
-  //height/width
-  height: 100%;
+  //background
   background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
   background-size: cover;
   position: relative;
 
-  .background {
-    max-height: 100%;
-    height: 100vh;
+  //form styling
+  #addPerson {
+
+    //background
     background: url('../../assets/images/parchment.png') center center no-repeat;
     background-size: cover;
+
+    //margin/padding
+    padding: 40px 60px;
+    @include desktop {
+      padding: 40px 100px;
+    }
   }
 
 }

@@ -4,13 +4,7 @@
   margin: none;
   box-sizing: none;
 }
-html, body {
-  width: 100%;
-  max-width: 100%;
-  min-width: 350px;
-  height: 100vh;
-  max-height: 100%;
-}
+
 
 li {
   list-style: none;
@@ -19,17 +13,4 @@ li {
 a {
   text-decoration: none;
   color: white;
-}
-
-//titles and sub-titles
-.sub-title {
-  //color
-  color: white;
-
-  //typography
-  font-family: 'Metal Mania', cursive;
-  font-size: 50pt;
-
-  //alignment/layout
-  text-align: center;
 }
