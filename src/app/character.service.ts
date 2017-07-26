@@ -48,20 +48,5 @@ export class CharacterService {
     characterEntryInFirebase.remove();
   }
 
-  // getActiveCharacter(){
-  //   this.route.params.forEach((urlParameters) => {
-  //    this.characterId = urlParameters['id'];
-  //   });    this.getCharacterById(this.characterId).subscribe(dataLastEmittedFromObserver => {
-  //     this.characterToDisplay = new Character(dataLastEmittedFromObserver.name,
-  //                                    dataLastEmittedFromObserver.gender,
-  //                                    dataLastEmittedFromObserver.charisma,
-  //                                    dataLastEmittedFromObserver.dexterity,
-  //                                    dataLastEmittedFromObserver.intelligence,
-  //                                    dataLastEmittedFromObserver.strength,
-  //                                    dataLastEmittedFromObserver.inventory,
-  //                                    dataLastEmittedFromObserver.gold,
-  //                                    dataLastEmittedFromObserver.scene)
-  //
-  //   })
-  // }
+  
 }

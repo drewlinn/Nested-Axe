@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Character } from '../character.model';
@@ -14,6 +14,8 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class CharacterDetailComponent implements OnInit {
   characterId: string;
   characterToDisplay: Character;
+  // @Input() clickedCharacter: Character;
+  // @Output() clickSender = new EventEmitter;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,9 +24,6 @@ export class CharacterDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    // this.characterService.getActiveCharacter() {};
-
     this.route.params.forEach((urlParametersArray) => {
      this.characterId = urlParametersArray['id'];
    });
@@ -41,5 +40,7 @@ export class CharacterDetailComponent implements OnInit {
 
    })
   }
-
+  selectCharacter(character) {
+    let activeCharacter = this.characterService.getCharacter(this.characterId);
+  }
 }

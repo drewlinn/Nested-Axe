@@ -9,7 +9,6 @@ import { CharacterComponent } from '../character/character.component';
   providers: [CharacterService]
 })
 export class Scene01Component implements OnInit {
-  activeCharacter;
   constructor( private characterService: CharacterService ) { }
 
   ngOnInit() {
@@ -20,10 +19,10 @@ export class Scene01Component implements OnInit {
    }
 
   scene02Change(activeCharacter){
-    this.characterService.updateCharacter(activeCharacter.scene = "scene02")
     console.log(activeCharacter);
+    activeCharacter.scene = "scene02";
   }
   scene03Change(activeCharacter){
-    this.characterService.updateCharacter(activeCharacter.scene = "scene03")
+    activeCharacter.scene = "scene03";
   }
 }

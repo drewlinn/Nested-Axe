@@ -8,5 +8,5 @@
   <p>Inventory: {{characterToDisplay?.inventory}}</p>
   <p>Gold: {{characterToDisplay?.gold}}</p>
 
-  <button routerLink="../../{{characterToDisplay?.scene}}/{{this.characterId}}">Select this Adventurer</button>
+  <button routerLink="../../{{characterToDisplay?.scene}}/{{this.characterId}}" (click)="selectCharacter(characterToDisplay)">Select this Adventurer</button>
 </div>

@@ -35,7 +35,7 @@ export class CharacterComponent implements OnInit {
                                       dataLastEmittedFromObserver.inventory,
                                       dataLastEmittedFromObserver.gold,
                                       dataLastEmittedFromObserver.scene)
+                                      console.log(this.activeCharacter);
    })
   }
-
 }

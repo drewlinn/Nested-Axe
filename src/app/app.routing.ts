@@ -7,6 +7,7 @@ import { PlayerComponent } from './player/player.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { AboutComponent } from './about/about.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import { CharacterComponent } from './character/character.component';
 
 //scene components
 import { StartPageComponent } from './start-page/start-page.component';
@@ -16,6 +17,7 @@ import { Scene03Component } from './scene03/scene03.component';
 import { Scene04Component } from './scene04/scene04.component';
 import { Scene05Component } from './scene05/scene05.component';
 import { Scene06Component } from './scene06/scene06.component';
+import { Scene07Component } from './scene07/scene07.component';
 
 const appRoutes: Routes = [
   {
@@ -25,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'player',
     component: PlayerComponent
+  },
+  {
+    path: 'character',
+    component: CharacterComponent
   },
   {
     path: 'character-list',
@@ -44,10 +50,6 @@ const appRoutes: Routes = [
   },
   {
     path: 'scene01/:id',
-    component: StartPageComponent
-  },
-  {
-    path: 'scene01',
     component: Scene01Component
   },
   {
