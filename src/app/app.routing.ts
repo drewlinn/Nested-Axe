@@ -7,6 +7,7 @@ import { PlayerComponent } from './player/player.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { AboutComponent } from './about/about.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import { IntroComponent } from './intro/intro.component';
 
 //scene components
 import { StartPageComponent } from './start-page/start-page.component';
@@ -39,6 +40,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'intro',
+    component: IntroComponent
   },
   {
     path: 'welcome',

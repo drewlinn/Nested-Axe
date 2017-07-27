@@ -1,0 +1,51 @@
+.background {
+  background: url('../../assets/images/nested-axe-pixelated.png') center center no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  width: 100vw;
+
+  color: white;
+
+  padding: 60px;
+
+  overflow: hidden;
+  //flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+}
+
+.text-box {
+  h3 {
+    font-size: 40pt;
+    line-height: 1.5em;
+  }
+  max-width: 800px;
+  text-align: center;
+  font-family: 'Metal Mania', cursive;
+  // font-family: times;
+
+}
+
+// .unloaded {
+//   position: relative;
+//   bottom: -1000px;
+//   transition: all 30s;
+//
+// }
+//
+// .loaded {
+//   bottom: 0px;
+// }
+.button {
+  border: 3px solid white;
+  border-radius: 3px;
+  width: 160px;
+  margin: auto;
+  h3{
+    margin: 2px;
+  }
+}
