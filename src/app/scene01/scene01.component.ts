@@ -5,6 +5,8 @@ import { CharacterDetailComponent } from '../character-detail/character-detail.c
 import { CharacterService } from '../character.service';
 import { CharacterComponent } from '../character/character.component';
 import { Character } from '../character.model';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -21,17 +23,20 @@ export class Scene01Component implements OnInit {
   characterToPlay: Character;
   currentRoute: string = this.router.url;
 
-  constructor(private router: Router, private characterService: CharacterService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private router: Router, private characterService: CharacterService) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParametersArray) => {
+      this.characterId = urlParametersArray['id'];
+    });
     this.characters = this.characterService.getCharacters();
   }
 
-  scene02Change(activeCharacter){
-
+  scene02Change(activeCharacter, characterId){
     activeCharacter.activeCharacter.scene = "scene02";
-    // this.characterService.updateCharacter(activeCharacter.characterId);
-    // console.log(activeCharacter);
+    activeCharacter.activeCharacter.inventory = "Nested Axe";
+    this.characterService.saveCharacter(activeCharacter.activeCharacter, this.characterId);
+    console.log(this.characterId);
     console.log(activeCharacter.activeCharacter);
   }
   scene03Change(activeCharacter){

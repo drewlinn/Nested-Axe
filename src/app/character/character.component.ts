@@ -38,7 +38,4 @@ export class CharacterComponent implements OnInit {
                                       console.log();
    })
   }
-  saveCharacter(activeCharacter) {
-    this.characterService.updateCharacter(activeCharacter);
-  }
 }

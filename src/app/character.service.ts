@@ -45,5 +45,18 @@ export class CharacterService {
     characterEntryInFirebase.remove();
   }
 
+  saveCharacter(localUpdatedCharacter, characterId){
+    var characterEntryInFirebase = this.getCharacterById(characterId);
+    console.log(characterId);
+    characterEntryInFirebase.update({name: localUpdatedCharacter.name,
+                                gender: localUpdatedCharacter.gender,
+                                charisma: localUpdatedCharacter.charisma,
+                                dexterity: localUpdatedCharacter.dexterity,
+                                intelligence: localUpdatedCharacter.intelligence,
+                                strength: localUpdatedCharacter.strength,
+                                inventory: localUpdatedCharacter.inventory,
+                                gold: localUpdatedCharacter.gold,
+                                scene: localUpdatedCharacter.scene});
+  }
 
 }
