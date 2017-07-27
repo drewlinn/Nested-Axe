@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
@@ -6,32 +6,29 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss'],
   animations: [
-    trigger('myAwesomeAnimation', [
-
-      state('begin', style ({
-        transform: 'translateY(60%)',
-      })),
-
-      state('end', style ({
-        transform: 'translateY(-50%)',
-      })),
-
-
-      transition('begin => end', animate('12s linear')),
-    ]),
+    trigger('crawl', [
+      // state('in', style({transform: 'translateY(-50%)'})),
+      transition(':enter', [
+        style({transform: 'translateY(60%)'}),
+        animate(17500, style({transform: 'translateY(-50%)'}))
+        ])
+      ])
   ]
-})
-export class IntroComponent implements OnInit {
-  state: string = 'begin';
+  //end animation
+})//end component decorator
+export class IntroComponent {
+  state: string = 'in';
 
   constructor() { }
 
   ngOnInit() { }
+  //
+  // ngAfterViewChecked() {
+  //   this.animateMe();
+  // }
 
-  ngAfterViewInit() {}
-
-  animateMe() {
-    this.state = (this.state === 'begin' ? 'end' : 'begin')
-  }
+  // animateMe() {
+  //   this.state = (this.state === 'begin' ? 'end' : 'begin')
+  // }
 
 }
