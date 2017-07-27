@@ -1,4 +1,13 @@
-<!-- <nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="row">
+    <router-outlet class="router"></router-outlet>
+  </div>
+</div>
+
+
+<!-- commented code present for potential further use
+
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" routerLink="">Nested Axe</a>
@@ -8,21 +17,17 @@
       <li><a routerLink="character-list">Characters List</a></li>
     </ul>
   </div>
-</nav> -->
-<!-- <div class="background">
+</nav>
+<div class="background">
   <div class="content">
     <img src="assets/images/parchment (1).png" alt="parchment">
     <router-outlet class="router"></router-outlet>
   </div>
-</div> -->
-
-<!-- <app-welcome></app-welcome> -->
-<div class="container-fluid">
-  <!-- <a class="text-muted" routerLink="player">Player</a> -->
-  <div class="row">
-    <router-outlet class="router"></router-outlet>
-  </div>
 </div>
-<!-- <div>
+
+<app-welcome></app-welcome>
+<a class="text-muted" routerLink="player">Player</a>
+
+<div>
   <character-detail [activeCharacter]="selectedCharacter" (clickSender)="selectCharacter($event)"></character-detail>
 </div> -->
