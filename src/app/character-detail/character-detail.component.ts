@@ -16,9 +16,8 @@ import { CharacterListComponent } from '../character-list/character-list.compone
 export class CharacterDetailComponent implements OnInit {
   characterId: string;
   characterToDisplay: Character;
-  // @Input(this.selectedCharacter) chosenCharacter: any;
-  // @Input()
-  // get selectedCharacter(): Character { return this.selectedCharacter; }
+  @Input() selectedCharacter;
+
 
 
   constructor(
@@ -43,5 +42,10 @@ export class CharacterDetailComponent implements OnInit {
                                       dataLastEmittedFromObserver.scene)
 
    })
+  }
+  selectCharacter(characterToDisplay) {
+    this.selectedCharacter = this.characterToDisplay;
+    console.log(this.characterService.getCharacterById(this.characterId));
+
   }
 }

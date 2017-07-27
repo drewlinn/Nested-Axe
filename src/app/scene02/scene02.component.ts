@@ -16,7 +16,7 @@ export class Scene02Component implements OnInit {
 
    scene04Change(activeCharacter){
      activeCharacter.activeCharacter.scene = "scene04";
-     console.log(activeCharacter.activeCharacter)
+     console.log(activeCharacter.characterId);
    }
   scene05Change(activeCharacter){
     activeCharacter.activeCharacter.scene = "scene05";

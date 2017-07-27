@@ -8,7 +8,7 @@
     <p><strong>Strength:</strong> {{characterToDisplay?.strength}}</p>
     <p><strong>Inventory:</strong> {{characterToDisplay?.inventory}}</p>
     <p><strong>Gold:</strong> {{characterToDisplay?.gold}}</p>
-    <button routerLink="../../{{characterToDisplay?.scene}}/{{this.characterId}}">Select this Adventurer</button>
+    <button routerLink="../../{{characterToDisplay?.scene}}/{{this.characterId}}" (click)="selectCharacter(characterToDisplay)">Select this Adventurer</button>
   </div>
 
 </div>
