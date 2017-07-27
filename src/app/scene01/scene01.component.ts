@@ -34,12 +34,11 @@ export class Scene01Component implements OnInit {
 
   scene02Change(activeCharacter, characterId){
     activeCharacter.activeCharacter.scene = "scene02";
-    activeCharacter.activeCharacter.inventory = "Nested Axe";
     this.characterService.saveCharacter(activeCharacter.activeCharacter, this.characterId);
-    console.log(this.characterId);
-    console.log(activeCharacter.activeCharacter);
   }
-  scene03Change(activeCharacter){
+  scene03Change(activeCharacter, characterId){
+    activeCharacter.activeCharacter.inventory = "Nested Axe";
     activeCharacter.activeCharacter.scene = "scene03";
+    this.characterService.saveCharacter(activeCharacter.activeCharacter, this.characterId);
   }
 }

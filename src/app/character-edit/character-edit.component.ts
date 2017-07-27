@@ -13,7 +13,6 @@ export class CharacterEditComponent implements OnInit {
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
-    console.log(this.selectedCharacter);
   }
 
   beginUpdatingCharacter(characterToUpdate){

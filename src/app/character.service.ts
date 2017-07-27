@@ -47,7 +47,6 @@ export class CharacterService {
 
   saveCharacter(localUpdatedCharacter, characterId){
     var characterEntryInFirebase = this.getCharacterById(characterId);
-    console.log(characterId);
     characterEntryInFirebase.update({name: localUpdatedCharacter.name,
                                 gender: localUpdatedCharacter.gender,
                                 charisma: localUpdatedCharacter.charisma,
