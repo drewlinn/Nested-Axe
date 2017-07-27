@@ -7,10 +7,11 @@
   <div class="scene01 col-md-10-offset-1">
     <img src="../assets/images/weapon-shop.png" alt="">
     <div class="belowScene">
-      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?</h3>
-      <h4 routerLink="/scene05/{{activeCharacter.characterId}}" (click)="scene05Change(activeCharacter)">Decision A <span class="glyphicon glyphicon-chevron-left"></span></h4>
-
-      <h4 routerLink="/scene06/{{activeCharacter.characterId}}" (click)="scene06Change(activeCharacter)">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h2>Weapon Shop</h2>
+      <h4>First thing you need is a weapon.  After selecting a fine axe, you...</h4>
+      <br>
+      <h4 routerLink="/scene05/{{activeCharacter.characterId}}" (click)="scene05Change(activeCharacter)">Head to the graveyard to find your undead father <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h4 routerLink="/scene06/{{activeCharacter.characterId}}" (click)="scene06Change(activeCharacter)">Go to the church to get a crucifix to ward off the black magic affecting your father. <span class="glyphicon glyphicon-chevron-left"></span></h4>
     </div>
   </div>
 </div>

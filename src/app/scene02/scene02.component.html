@@ -7,10 +7,13 @@
   <div class="scene01 col-md-10-offset-1">
     <img src="../assets/images/tavern.jpg" alt="">
     <div class="belowScene">
-      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?</h3>
-      <h4 routerLink="/scene04/{{activeCharacter.characterId}}" (click)="scene04Change(activeCharacter)">Decision A <span class="glyphicon glyphicon-chevron-left"></span></h4>
-
-      <h4 routerLink="/scene05/{{activeCharacter.characterId}}" (click)="scene05Change(activeCharacter)">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h2>Tavern</h2>
+      <h4>A fugitive and a priest walk into a bar...</h4>
+      <h4> You tell the priest your predicament.
+        The priest says "come to church, my son, and absolve your sins before facing this black magic." </h4>
+        <br>
+      <h4 routerLink="/scene04/{{activeCharacter.characterId}}" (click)="scene04Change(activeCharacter)">Go to cathedral <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h4 routerLink="/scene05/{{activeCharacter.characterId}}" (click)="scene05Change(activeCharacter)">Play along, but plan to ditch the priest in the hall. <span class="glyphicon glyphicon-chevron-left"></span></h4>
     </div>
   </div>
 </div>

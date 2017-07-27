@@ -4,12 +4,12 @@
   <div class="row background">
   <div class="scene01 col-md-10-offset-1">
     <img src="../assets/images/jail-cell-2-pixelated.png" alt="">
-
     <div class="belowScene">
-      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?</h3>
-      <h4 routerLink="/scene02/{{activeCharacter.characterId}}" (click)="scene02Change(activeCharacter)">Decision A <span class="glyphicon glyphicon-chevron-left"></span></h4>
-
-      <h4 routerLink="/scene03/{{activeCharacter.characterId}}" (click)="scene03Change(activeCharacter)">Decision B <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h2>Jail Cell</h2>
+      <h4>The magician will let you out if you accept the mission to kill your own undead father.  What do you do?</h4>
+      <br>
+      <h4 routerLink="/scene02/{{activeCharacter.characterId}}" (click)="scene02Change(activeCharacter)">Accept the mission <span class="glyphicon glyphicon-chevron-left"></span></h4>
+      <h4 routerLink="/scene03/{{activeCharacter.characterId}}" (click)="scene03Change(activeCharacter)">Break out and go to the tavern <span class="glyphicon glyphicon-chevron-left"></span></h4>
     </div>
   </div>
 </div>
