@@ -6,7 +6,7 @@
 
 ## Description
 
-Nested Axe is a Choose Your Own Adventure Game
+Nested Axe is a Choose Your Own Adventure Game where you can create a character and play with that character through a short adventure.
 
 ## Planning
 
@@ -31,23 +31,17 @@ Nested Axe is a Choose Your Own Adventure Game
 
   | Behavior | Input | Output |
   | :--------| :---- | :------|
+  | User can create a character | "Ragnar the Beast Slayer" | "Ragnar the Beast Slayer" |
+  | User can update that character | click "update" | "Ragnar the Beast" |
+  | User can delete a character | click "delete" | "Are you sure you want to delete this character" |
+  | User can select their character and play with them through the adventure | click "Select this character" | game start "You are in a jail cell..." |
+  | Character's progress through the game is tracked, so the user can start where they left off | "Select this character" | game start on scene03 |
 
 3. Integration
-  * app.module, app.routing, app.component first route to welcome.component
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
-
-4. UX/UI
-  * Include and modify bootstrap/materialize/Sass etc.
-  * Develop custom style
-
-5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome
+  * app.module, app.routing, app.component first route to welcome.component for application entry and routing
+  * player, character-list, character-edit, character-detail, and character components for creating characters in our database and selecting them for gameplay.
+  * scene01-scene07 for our adventure scenarios.
+  * about component to briefly describe the application.
 
 ## Setup/Installation Requirements
 
